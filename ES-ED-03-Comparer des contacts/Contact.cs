@@ -50,14 +50,21 @@ namespace ES_ED_03_Comparer_des_contacts
 
 		public int CompareTo(Contact other)
 		{
-			if (Nom == other.Nom || Prénom == other.Prénom)
-			{
-				Prénom.CompareTo(other.Prénom);
-				return dateNaissance.CompareTo(other.dateNaissance);
-			}
+            if (Nom.CompareTo(other.Nom) == 0)
+            {
+                return Prénom.CompareTo(other.Prénom);
+            }
 
-			return Nom.CompareTo(other.Nom);
-		}
-	}
+            else if (Nom.CompareTo(other.Nom) == 0 && Prénom.CompareTo(other.Prénom) == 0)
+            {
+                return dateNaissance.CompareTo(other.dateNaissance);
+            }
+
+            else
+            {
+                return Nom.CompareTo(other.Nom);
+            } 
+        }
+    }
 }
 
