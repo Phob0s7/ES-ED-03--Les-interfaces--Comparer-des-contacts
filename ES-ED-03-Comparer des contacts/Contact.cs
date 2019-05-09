@@ -60,10 +60,9 @@ namespace ES_ED_03_Comparer_des_contacts
                 return dateNaissance.CompareTo(other.dateNaissance);
             }
 
-            else
-            {
+            
                 return Nom.CompareTo(other.Nom);
-            } 
+            
         }
     }
 }
